@@ -1,6 +1,3 @@
-import Add from "./components/Add";
-import Greetings from "./components/Greetings";
-
 // Class Components
 // import { Component } from "react";
 
@@ -11,13 +8,18 @@ import Greetings from "./components/Greetings";
 // }
 
 // Functional Components 
+const numbers = [1,2,3,4,5]
 
 function App(){
-  return (<div>
-    <h1>Hello Abhi</h1>
-    <Greetings/>
-    <Add/>
-  </div>);
+  return (
+    <>
+      <ul>
+      {numbers.map(num=>(
+        <li key={Math.random()}>{num}</li>
+      ))}
+      </ul>
+    </>
+  )
 }
 
 export default App;
